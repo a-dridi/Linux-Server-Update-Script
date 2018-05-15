@@ -6,7 +6,6 @@ An executable shell script to automatically update your Ubuntu or Debian server 
 To run this script the following packages are needed:
 * mktemp
 * python 
-* environment 
 * python-gtk2
 * python-apt
 * python-dev
