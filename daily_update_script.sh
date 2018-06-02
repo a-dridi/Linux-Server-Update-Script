@@ -31,8 +31,12 @@ aptitude clean >> ${tempfile} 2>&1
 # was succesful or not is written in the subject field.
 if grep -q 'E: \|W: ' ${tempfile} ; then
         mail -s "Linux Server - Update FAILED $(date)" ${admin_email} < ${tempfile}
+        echo "Linux Server - Update FAILED $(date)" > /var/log/dailyupdate.log
+        cat ${tempfile} >> /var/log/dailyupdate.log
 else
         mail -s "Linux Server - Update was sucessfull $(date)" ${admin_email} < ${tempfile}
+        echo "Linux Server - Update FAILED $(date)" > /var/log/dailyupdate.log
+        cat ${tempfile} >> /var/log/dailyupdate.log
 fi
 
 # Remove the before created temporary log file.
