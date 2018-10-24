@@ -26,6 +26,9 @@ aptitude -y full-upgrade >> ${tempfile} 2>&1
 echo "" >> ${tempfile}
 echo "aptitude clean" >> ${tempfile}
 aptitude clean >> ${tempfile} 2>&1
+echo "apt autoremove -y" >> ${tempfile}
+apt autoremove -y >> ${tempfile} 2>&1
+
 
 # Commands to send the temporary log via mail. information about whether the upgrade
 # was succesful or not is written in the subject field.
