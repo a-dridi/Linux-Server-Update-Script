@@ -2,6 +2,8 @@
 
 An executable shell script to automatically update your Ubuntu or Debian server with the latest packages and patches. This script can be run as a cronjob too. It sends you information about your update procedure and if it failed or succeded. Needs ROOT privileges. 
 
+Caution: You may need to intervene on the server yourself if problems occured during the upgrade procedure. 
+
 ## Prerequisites
 To run this script the following packages are needed:
 * mktemp
