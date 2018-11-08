@@ -14,13 +14,14 @@ admin_email="myemail@domain"
 tempfile=$(mktemp)
 
 #Creating a lockfile to prevent system shutdown or reboot during upgrade process
-python -c 'import apt_pkg, gtk; apt_pkg.get_lock("/var/run/unattended-upgrades.lock"); gtk.main()' &
+touch /var/run/unattended-upgrades.lock
 
 # Commands to update the system and to write the log
 # file at the same time.
 echo "aptitude update" >> ${tempfile}
 aptitude update >> ${tempfile} 2>&1
 echo "" >> ${tempfile}
+export DEBIAN_FRONTEND=noninteractive
 echo "aptitude -y full-upgrade" >> ${tempfile}
 aptitude -y full-upgrade >> ${tempfile} 2>&1
 echo "" >> ${tempfile}
