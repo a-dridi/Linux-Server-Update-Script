@@ -7,10 +7,6 @@ Caution: You may need to intervene on the server yourself if problems occured du
 ## Prerequisites
 To run this script the following packages are needed:
 * mktemp
-* python 
-* python-gtk2
-* python-apt
-* python-dev
 * aptitude
 
 ## Configuration
