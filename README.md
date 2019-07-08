@@ -23,7 +23,7 @@ Example for a cronjob:
 10 2      * * *  /etc/cron.daily/daily_update_script.sh
 ```
 
-##Logging
+## Logging
 The script saves the output in this log file:
 ```
 /var/log/dailyupdate.log
