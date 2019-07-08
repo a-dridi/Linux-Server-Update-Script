@@ -23,6 +23,12 @@ Example for a cronjob:
 10 2      * * *  /etc/cron.daily/daily_update_script.sh
 ```
 
+##Logging
+The script saves the output in this log file:
+```
+/var/log/dailyupdate.log
+```
+
 ## Authors
 
 * **A. Dridi** - [a-dridi](https://github.com/a-dridi/)
