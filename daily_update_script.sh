@@ -2,7 +2,7 @@
 
 #Automatic Package Update Script for Ubuntu/Debian machine
 #Send email about upgrade with log file
-#NEEDS packages: mktemp,  python environment, python-gtk2, python-apt, python-dev and aptitude
+#NEEDS packages: mktemp and aptitude
 
 #Created by http://www.github.com/a-dridi
 
